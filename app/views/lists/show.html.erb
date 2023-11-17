@@ -1,6 +1,16 @@
-<%= @list.name %>
-<% @list.bookmarks.each do |bookmark| %>
-<h2><%= bookmark.comment %></h2>
-<h3><%= bookmark.movie.title %></h3>
-<%= link_to "delete", list_bookmark_path(bookmark), data:{turbo_method: "delete", turbo_confirm: "Did you mean to delete?"} %>
-<% end %>
+<div class="container pb-5">
+<h1><%= @list.name %></h1>
+
+  <div class="card-grid">
+    <% @list.bookmarks.each do |bookmark| %>
+  <div class="movie-cards">
+    <h3><%= bookmark.movie.title %></h3>
+    <h5><%= bookmark.comment %></h5>
+    <%= image_tag bookmark.movie.poster_url, id:"images" %>
+    <%= link_to "delete", bookmark_path(bookmark), data:{turbo_method: "delete", turbo_confirm: "Did you mean to delete?"} %>
+  </div>
+    <% end %>
+    <%= link_to "Add film", new_list_bookmark_path(@list), class:"btn btn-primary" %>
+    <%= link_to "See all lists", lists_path, class:"btn btn-primary" %>
+  </div>
+</div>

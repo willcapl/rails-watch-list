@@ -1,4 +1,9 @@
-<%= simple_form_for(@list) do |f| %>
-<%= f.input :name %>
-<%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="movie-form-style">
+    <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name, input_html:{class:"form-control"} %>
+    <%= f.submit "Submit", class:"btn btn-primary my-2" %>
+    <% end %>
+      <%= link_to "Back to homepage", lists_path,class:"btn btn-secondary" %>
+  </div>
+</div>

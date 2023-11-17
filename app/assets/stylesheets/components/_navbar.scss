@@ -10,3 +10,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-link {
+  p {
+    margin: 0px;
+    color: black;
+    margin-left: 16px;
+  }
+}
+
+.container-form{
+  background-color: aquamarine;
+}
+
+.movie-form-style{
+  width: 250px;
+  height: 250px;
+  align-items: center;
+  margin: 200px auto 0;
+  background-color: azure;
+  padding: 32px;
+  border-radius: 10px;
+}

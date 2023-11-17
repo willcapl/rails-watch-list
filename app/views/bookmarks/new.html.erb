@@ -1,5 +1,7 @@
-<%= simple_form_for [@list, @bookmark] do |f| %>
-<%= f.association :movie %>
-<%= f.input :comment %>
-<%= f.submit %>
+<div class="">
+  <%= simple_form_for [@list, @bookmark], html:{class:"row row-cols-lg-auto g-3 align-items-center mt-4 ms-2"} do |f| %>
+  <%= f.association :movie %>
+  <%= f.input :comment %>
+  <%= f.submit %>
 <% end %>
+</div>
